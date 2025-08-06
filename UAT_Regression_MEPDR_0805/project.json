@@ -1,0 +1,92 @@
+{
+  "name": "UAT_Regression_MEPDR",
+  "projectId": "cd5ad9fd-f1a0-4c0f-8949-75f42ba3d863",
+  "description": "Regression scripts for MEPDR application - Collections and Publications.",
+  "main": "Code\\Main\\MEPDR_Regression_Main.xaml",
+  "dependencies": {
+    "BalaReva.Excel.Activities": "[2021.1.0]",
+    "System.Data.Common": "[4.3.0]",
+    "UiPath.Credentials.Activities": "[2.0.0]",
+    "UiPath.Cryptography.Activities": "[1.4.2]",
+    "UiPath.Database.Activities": "[1.7.1]",
+    "UiPath.Excel.Activities": "[2.24.4]",
+    "UiPath.GSuite.Activities": "[3.2.10]",
+    "UiPath.Mail.Activities": "[1.12.3]",
+    "UiPath.MicrosoftOffice365.Activities": "[3.2.10]",
+    "UiPath.PDF.Activities": "[3.6.0]",
+    "UiPath.System.Activities": "[22.10.8]",
+    "UiPath.Terminal.Activities": "[2.8.2]",
+    "UiPath.Testing.Activities": "[23.4.1]",
+    "UiPath.UIAutomation.Activities": "[24.10.10]",
+    "UiPath.Word.Activities": "[1.20.3]",
+    "UiPathTeam.Excel.Extensions.Activities": "[2.0.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.4.4.0",
+  "projectVersion": "1.0.1",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Code/Main/EBSS_UAT_Regression_Main.xaml",
+      "uniqueId": "3da48ff3-04d3-4c38-a939-a91ccc0298f5",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Code\\Main\\MBE_UAT_Regression_Main.xaml",
+      "uniqueId": "4e27b831-a4f3-4b9a-8241-cbaf0289e94f",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Code\\Main\\EBSS_Regression_Main.xaml",
+      "uniqueId": "9a476eb6-1374-4108-9ecd-d16ba265a3be",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Code\\Main\\MEPDR_Regression_Main.xaml",
+      "uniqueId": "ea70b6e6-41ac-4c62-987b-8151bc9d8320",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

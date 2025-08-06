@@ -1,0 +1,257 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Test_Bench" this:Test_Bench.str_UserEmail="Vimalesh.X.Nithyanandam@kp.org" this:Test_Bench.str_DatabaseName="tnt_mepdrpsup01" this:Test_Bench.str_ServerName="kpsqskpdusw2psup02.database.windows.net" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="str_UserEmail" Type="InArgument(x:String)" />
+    <x:Property Name="str_DatabaseName" Type="InArgument(x:String)" />
+    <x:Property Name="str_ServerName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1121,2830</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Cryptography.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Terminal</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPathTeam.Excel.Extensions.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Cryptography</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Connecting to SQL" sap:VirtualizedContainerService.HintSize="1112,2765" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="bool_Exist" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Microsoft SQL Server Management Studio" sap:VirtualizedContainerService.HintSize="1050,2654" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="de55c167-10ac-4620-bd8f-409161f9d2ef" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2363" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState Exists="{x:Null}" CheckVisibility="True" DisplayName="Check App State 'SQL Server'" sap:VirtualizedContainerService.HintSize="954,2248" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,2031" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Server Name'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="185, 187, 249, 15" ElementType="InputBox" FriendlyName="'kpsqskpdusw2psup02.data…'" FullSelectorArgument="&lt;wnd aaname='Server name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Server name:' cls='Edit' /&gt;" Guid="77a1c877-0f44-45d0-b863-97fb8b1ce603" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP0AAAATCAYAAABbewsOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQzSURBVHhe7VoxbuswDO1x/hlyoJ7h3+CvPkZOkDGnCPCHAN2yFJ06dVNJipQpmZLlJi7cmgQeKskU+UiJkt32Kbi4uOxKvOhdXHYmqeif/v53OBwrIPz7w1W2DfGi3wqGl3AYjHHHj8dmi/76+hYOBuFVMLzd5+/e+Q08Xz44I5CT84up82hEnx/hij4vt2I8yiyXR+Rkxbyuio3z9qJHbLXoj+8hXMTuSxheQzgdC51HI4sFfX6EAW/8pVzmctKTs7XyuhRLeWyFt6Dg40WPuHeRvmmRD2e4fde+7am49e1uF/csl7mc9OTsm/L6cGyNd8HnBxT9LZzgtjkdYYMR+XfosxK0nzkQ3IRRQFc2I+iPuvCcbU50s6T0+dO2r2I7sxN1pG/6DGIPfJptDb5dz3VO7bgA0qefdRu6mMt+ROWmB7uTnOA4HCT4qRAl5hbnk1R1oj3iKZ8ViqepD+OTHKCu4oU26M1F7PDz5loQjzFvQ/rMGf1WYy98k905f9A24xB08oixTnO97aIfIAmQwLRInCzpU2LoVlKJSwnFYDEZMWEHvMEoaEOXkrjEn2z6wrbYwbkyv+aT+ZFtnA8ybnRlg0G+xYfJqRGX2JF+1UZszxV94qLGqjnJdACag/W81KENzTYVT1N/Ls+ZLvcJM2uhfyo+dPCQrVrsxXjiP+PPjAPagiYPI9ZkN45vt+ghqCueUHqRC/JjPyYXb/PT+QZBfkF3ib+l45ZPeC6vzvgLsgFvcPSNC2gUWbK7xEdNt2qDfTWKPuOi0bCJbTxMk+C4od+j07RZXdtSVGEwmmshfmt8lo5Du7329n5JaPmLASoB+8dcf8NFjzdVDJ5OwVawqX/jVx6cu1B3ib+l46mvfGKfFhk3L+rgW8YbbABYaPEPoNuhabPho6bbsgGc9MGnv+knXDSqNvHWwo3HB4fJoUenw2bSM9ZWntXQWos5PkvHsd2x9pP9ksYb/qxYC/3tf9PrQLgtpzRtQtqgvAloHAsX23oMdDHJZNPQ1Sdhlz85HOKmG4sBbSv9lk9q4zjEyjcp/UlMvvsQmksxNuVk+ajwqdpg+5ILzdXikqEzJ2d+9c38NHRMnhV9MwfMS95WMr8aOLeyFjKnnJv6tdiNcclzy58ZB/tEzPEoYy30f8Av8lQSiTychhAYSaYDG5qHJZF0msrYRQrQ0C2S0uOP5vDwFRZstA1zSWBeyyfZkU3BNoHvuCniLVtKjKM/ByafVlwA2oCgj7bk7/QmF/IRCzAVhzzLcqJ4gd/oD24x8h/nmjpkD+3wA8XTtmnnAG/M/JdbEqvi3loLyhfzURyyfVOJHcftPLfX3oxD+DZ5WLHmud5s0UvwGcpgl+Arc+/xtxYewanHhv9H3q+FF30Ley56x6/FZovexcVlH+JF7+KyM/Gid3HZmXjRu7jsSkL4BFVYeqalGZuUAAAAAElFTkSuQmCC" InformativeScreenshot="a6dce44759f5028728680aa974a510a0.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Server Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Text="[str_ServerName+ &quot;[k(tab)]&quot;]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="185, 187, 249, 15" ElementType="InputBox" FriendlyName="'kpsqskpdusw2psup02.data…'" FullSelectorArgument="&lt;wnd aaname='Server name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Server name:' cls='Edit' /&gt;" Guid="7acfe587-efb4-4e2a-bc46-8d53f3a03da9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP0AAAATCAYAAABbewsOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQzSURBVHhe7VoxbuswDO1x/hlyoJ7h3+CvPkZOkDGnCPCHAN2yFJ06dVNJipQpmZLlJi7cmgQeKskU+UiJkt32Kbi4uOxKvOhdXHYmqeif/v53OBwrIPz7w1W2DfGi3wqGl3AYjHHHj8dmi/76+hYOBuFVMLzd5+/e+Q08Xz44I5CT84up82hEnx/hij4vt2I8yiyXR+Rkxbyuio3z9qJHbLXoj+8hXMTuSxheQzgdC51HI4sFfX6EAW/8pVzmctKTs7XyuhRLeWyFt6Dg40WPuHeRvmmRD2e4fde+7am49e1uF/csl7mc9OTsm/L6cGyNd8HnBxT9LZzgtjkdYYMR+XfosxK0nzkQ3IRRQFc2I+iPuvCcbU50s6T0+dO2r2I7sxN1pG/6DGIPfJptDb5dz3VO7bgA0qefdRu6mMt+ROWmB7uTnOA4HCT4qRAl5hbnk1R1oj3iKZ8ViqepD+OTHKCu4oU26M1F7PDz5loQjzFvQ/rMGf1WYy98k905f9A24xB08oixTnO97aIfIAmQwLRInCzpU2LoVlKJSwnFYDEZMWEHvMEoaEOXkrjEn2z6wrbYwbkyv+aT+ZFtnA8ybnRlg0G+xYfJqRGX2JF+1UZszxV94qLGqjnJdACag/W81KENzTYVT1N/Ls+ZLvcJM2uhfyo+dPCQrVrsxXjiP+PPjAPagiYPI9ZkN45vt+ghqCueUHqRC/JjPyYXb/PT+QZBfkF3ib+l45ZPeC6vzvgLsgFvcPSNC2gUWbK7xEdNt2qDfTWKPuOi0bCJbTxMk+C4od+j07RZXdtSVGEwmmshfmt8lo5Du7329n5JaPmLASoB+8dcf8NFjzdVDJ5OwVawqX/jVx6cu1B3ib+l46mvfGKfFhk3L+rgW8YbbABYaPEPoNuhabPho6bbsgGc9MGnv+knXDSqNvHWwo3HB4fJoUenw2bSM9ZWntXQWos5PkvHsd2x9pP9ksYb/qxYC/3tf9PrQLgtpzRtQtqgvAloHAsX23oMdDHJZNPQ1Sdhlz85HOKmG4sBbSv9lk9q4zjEyjcp/UlMvvsQmksxNuVk+ajwqdpg+5ILzdXikqEzJ2d+9c38NHRMnhV9MwfMS95WMr8aOLeyFjKnnJv6tdiNcclzy58ZB/tEzPEoYy30f8Av8lQSiTychhAYSaYDG5qHJZF0msrYRQrQ0C2S0uOP5vDwFRZstA1zSWBeyyfZkU3BNoHvuCniLVtKjKM/ByafVlwA2oCgj7bk7/QmF/IRCzAVhzzLcqJ4gd/oD24x8h/nmjpkD+3wA8XTtmnnAG/M/JdbEqvi3loLyhfzURyyfVOJHcftPLfX3oxD+DZ5WLHmud5s0UvwGcpgl+Arc+/xtxYewanHhv9H3q+FF30Ley56x6/FZovexcVlH+JF7+KyM/Gid3HZmXjRu7jsSkL4BFVYeqalGZuUAAAAAElFTkSuQmCC" InformativeScreenshot="a6dce44759f5028728680aa974a510a0.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NSelectItem DisplayName="Select Item 'Authentication'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Microsoft Entra MFA" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Version="V1">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="8">
+                        <x:String>Windows Authentication</x:String>
+                        <x:String>SQL Server Authentication</x:String>
+                        <x:String>Microsoft Entra MFA</x:String>
+                        <x:String>Microsoft Entra Password</x:String>
+                        <x:String>Microsoft Entra Integrated</x:String>
+                        <x:String>Microsoft Entra Service Principal</x:String>
+                        <x:String>Microsoft Entra Managed Identity</x:String>
+                        <x:String>Microsoft Entra Default</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="182, 214, 272, 21" ElementType="DropDown" FriendlyName="'Microsoft Entra MFA'" FullSelectorArgument="&lt;wnd ctrlname='AdvancedView' /&gt;&lt;wnd ctrlname='pages' /&gt;&lt;wnd ctrlname='loginPage' /&gt;&lt;wnd ctrlname='loginHolderAdvanced' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='comboBoxAuthentication' /&gt;&lt;ctrl name='Authentication:' role='combo box' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='AdvancedView' /&gt;&lt;wnd ctrlname='pages' /&gt;&lt;wnd ctrlname='loginPage' /&gt;&lt;wnd ctrlname='loginHolderAdvanced' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='comboBoxAuthentication' /&gt;&lt;ctrl name='Authentication:' role='combo box' automationid='' /&gt;" Guid="b5dc8555-cedf-451f-9f5c-82460352ce4d" ImageBase64="" InformativeScreenshot="66596ea3c879c15d23d08c0f14f78060.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="43, 211, 78, 27" ElementType="Text" FriendlyName="'Authentication'" FullSelectorArgument="&lt;ctrl name='Authentication:' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Authentication:' role='text' automationid='' check:text='Authentication:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAfCAYAAAB06popAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVGhD7ZbRsQMhCEWtynrsxmLsxVq2AwMGXNeATuaRnzd8nJmI7F32KppwXVdz/o4baYQbaYQbaYQbaYQbaYQbaYQbaYQbaYQbaYQbacTeyJJaCLHlKsxp1NxizK1Kc/+YrZElxZZSajFXcX4wm2dlpIXmL+pS2BhZW46plau0dCrgFwVb6PzYvBndSCwiFfiNhlJ7r4X1cQKjAxwBAM5RLMNu7jE4GlK58+9cyBmaaz6+k/NYk95bcWFpjnK7NhxDscfuuK7xrKNM3yLWjZspUJ6CamTNtxD+7u09F4PweCkyrh/Y56YFWZ+V8lfNoRFa4qMGTYVnP87wWVvToPfhtwXcMDgv1j3pblCMnFaTWQtDtgULObNeB0wom/xVc46twFyChVLr1TROcR4fkI1Ekd7WHKPd9M1HSzlSe+zyV801d0A7k3fTNxqnOI8PiEaOVv6IwaqDGdxKdduG9OwYr21JcS1/jqsa3NrvM2zUleFv20lDam3OfeTT+IBgJO0+5dwp+GJqy/7XqL+s9OIC7rhdQfNF8bhspHxFU7ls0Dw+OiK2+FZjvmzumFwHjt8LVXhOQL1snO8QjXyvtoyU7/iONMONNMKNNMKNNMKNNMKNNMKNNMKNNMKNNOFqLwvE0MQk4OEgAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Text="[str_UserEmail]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="185, 247, 249, 15" ElementType="InputBox" FriendlyName="'Vimalesh.X.Nithyanandam…'" FullSelectorArgument="&lt;wnd aaname='User name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='User name:' cls='Edit' /&gt;" Guid="4279e8d9-4144-488a-94eb-b05e9fe1f7ad" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP0AAAATCAYAAABbewsOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP6SURBVHhe7ZmLsawwCIa3LguyHquxGYvx8pOAgMZV172zZ+SbObN5EPKCBHNec5IkjyKdPkkeRjp9kjyMdPokeRjq9EP3mvuxZoRpmLtumKeavcQVHQfbTONAY/ZS09ivyljfq5sHW7zXxx3z/ha3jm2ax6GntXnNL/nrumX9fnkdksuo009DN3fOK2pZT0bxycZfMZzDbca5t86Mdq+eSgNcDoM2OqWP+GvrWPDHuG1sEx/0HZ30k1U2jVSOfadV/OV1SC6zhPerDYZRhNvxClcM50wbutmLMxcjXkUroOobetxivkz7sPkrY/5f3DS2kdYiHvIW1A8USf3sOiSXMd/0wcnFuNwvhc5kDAgDu4FuBE6bcJAccAkVq4NZI6V0T45Zwshe+0JEoW1QWPsq+o2uBmNfdbaE3ByWsbh56biWstg/j9P0gX4525x3Yw5n5alOxtfRHmnEsqNnd59YZlkHq1siJcy1H4wcoiqqZx3Sh9lLGarD6FYZNz4qczJmbsnXcA95NsTXNG9SdQQyHK6O6a2Nsu24vnGowJgkJGe9xRCg3x0mW30IVV51R7QvqLLOYcZnZETfqn8uFwM347ZYfUfm8FZeIphSjjeLTccIenb3CbpRyPXL4Wtvf+f0FPLD4UUutouHYSGMW2RkTFzuZbhua27JrTinXxbdOKiU2Q3ZScM4+NTmk9u0w6+U6x/6KBvPD0h0K/H3pdUJYt4B5yPDgYFuOSFw7WHAYVz2dyVPmLy93dXQqb457yLhdZ6R/0RPKy1O7+aAdSx7jgdS3MZy+HbYH+vUVheIedCSseVH9CS3452elrs4+8bGtDZL09Vo4qltf1tOCfCAZEI+1Q9i3sChfTXI7RuHCO05ipEHSjs+kdnrvzoKf/OWgv15l1Kj46T8J3paaTg9rxMe7cqB0fVLmA05Vos2vB9yI6NxLRddIOZBS8aWH9GT3E5weqw7TvYlzHu7WZqGEdqQr4ahWl8NJ+oV4y3KyqETH5BsfxY4oDtIgnEKq/boM9yMVibKuzy1hXPY/O68K5o/Ky9zKjV8sB3V00rzHGTNd4jtZa1reul767DdGDdk3Di8DB9GWpd8i5XTlw01BiGbZDerkYbhSQivD05OtjoMO5w3WG2HQtsGuHwxdvoQ4P8xrwwXfeAzQeVQFvQR6jxaJ7cebra9/mGbdZyVt/MGJn9WntMij+/uo3paacA6yxuClkVCG79m1Fb30ugN676S2RyHyFT9tSr5DmunT96Ag6sa9V+nflKp0/EfIq1a3yI67k3wI+UqYkjuJp3+DPw54W/5R3Kj0+NtRA8cE/0l3yOdPkkeRjp9kjyMdPokeRjp9EnyKOb5H6DA75pQsOkQAAAAAElFTkSuQmCC" InformativeScreenshot="6d766ca3cc116b56482e280b16fb58b5.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="43, 241, 78, 27" ElementType="Text" FriendlyName="'&amp;User name'" FullSelectorArgument="&lt;wnd ctrlname='AdvancedView' /&gt;&lt;wnd ctrlname='pages' /&gt;&lt;wnd ctrlname='loginPage' /&gt;&lt;wnd ctrlname='loginHolderAdvanced' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='userNameLabel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='AdvancedView' /&gt;&lt;wnd ctrlname='pages' /&gt;&lt;wnd ctrlname='loginPage' /&gt;&lt;wnd ctrlname='loginHolderAdvanced' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='userNameLabel' check:text='&amp;amp;User name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAfCAYAAAB06popAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGaSURBVGhD7ZXRbcQgDECZinm8DcOwC7NkA9d2gDgcNCfV6NTWH09nDIH4AblwHAc6P8dFGuEijXCRRrhII1ykES7SCBdphIs0wkUa4SKN2CgyIwTA/Jj7G7hII1ykER8TWVLEEAIREVI5+0tCiJwjImAqZy5SDMDj1Xw1nyRf58m1LwNGyan8bZ6AMeX6LPd/s76s93wAPiRS9XGBEhdMMV4vL4UnLNJP+VZso+a7BJbH4/WYNk7P0zZHx/LcYv1xvgUfEskvzbvOpzFTkdQnxbVT1GCBi4LGQnWbYqC5+zycH/pfYv69rc0osQ9sFDnsMKMLkHa7XiRXChnF85jhmVW+t3mzeAOu69pFtfGzmH9n67/JRpEHZgjX1SMKXb8AmeJarEhuws9Tqr+XLwI0Y763z1PfNrAkWnOcZxov1uf4DbaKFEl04iKJEuB6MS6wXaXYX54kTP9sJgWNedW+zc1XnPN6/DKerM/56WfqzmaR/4dtIs+P9ZrZM78ZP5FGuEgjXKQRLtIIF2mEizTCRRrhIo1wkSYc+AW+A2fevadWYAAAAABJRU5ErkJggg==" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NSelectItem DisplayName="Select Item 'Encryption'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Optional" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Version="V1">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="3">
+                        <x:String>Optional</x:String>
+                        <x:String>Mandatory</x:String>
+                        <x:String>Strict (SQL Server 2022 and Azure SQL)</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="182, 315, 272, 21" ElementType="DropDown" FriendlyName="'Optional'" FullSelectorArgument="&lt;ctrl name='Encryption:' role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Encryption:' role='combo box' automationid='' /&gt;" Guid="a80a238d-c9a8-4a43-82cf-0296ba7e7faf" ImageBase64="" InformativeScreenshot="936958c6f116f77788e20d452eb4b812.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="43, 312, 60, 27" ElementType="Text" FriendlyName="'Encryption'" FullSelectorArgument="&lt;wnd ctrlname='AdvancedView' /&gt;&lt;wnd ctrlname='pages' /&gt;&lt;wnd ctrlname='loginPage' /&gt;&lt;wnd ctrlname='loginHolderAdvanced' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='encryptLabel' /&gt;&lt;ctrl name='Encryption:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='AdvancedView' /&gt;&lt;wnd ctrlname='pages' /&gt;&lt;wnd ctrlname='loginPage' /&gt;&lt;wnd ctrlname='loginHolderAdvanced' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='encryptLabel' /&gt;&lt;ctrl name='Encryption:' role='text' automationid='' check:text='Encryption:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAAAfCAYAAABXscv8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVGhD7VTRsYQgDKQq6kk3FEMv1EIHvIAJBl986s3p3ZvwsTOyrLBZTVzOuVjGDEAjLWEGoJGWMAPQSEuYAWikJcwANNIS9ABSKN654jaAqGj/OfYD8KEkbe8JyPtv9vL9AdyMawE0HkoAT23h17ZIsYDndql86npgPcR+VgRsqUD7/B4+x5xK6Gv0IL3g86g98JTRkyPdDi7MADyo8VRc1UUgc4tpCMTXMFAX4qIPHEY3Q8aIC2m5NwUsoobUilqLHu6guwet6mk58wgv/AGC5/VJffvq9eugyV+FSr3kNe4Mz+sDPBoAFx7xd21f/cx5GneG5/UB3hPAXy0wnENzgrn6/jtaQN6xXR/gwgxwxcOmvwajVFzTyiE4mqlt4HtQdR+1/F7XRhqENCf6HXIIrtyup5eH4G2oIQlDW/MfwHMB1P6nP0nCTgBfihmARlrCDEAjLWEGoJGWMAPQSDvI5QeqDw/RuIhs8AAAAABJRU5ErkJggg==" SearchSteps="Selector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Connection Properties'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="61, 106, 116, 17" ElementType="TabPage" FriendlyName="'Connection Properties'" FullSelectorArgument="&lt;ctrl name='Connection Properties' role='page tab' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Connection Properties' role='page tab' automationid='' check:text='Connection Properties' /&gt;" Guid="b47df749-a886-498d-9d09-8ec0db0eb370" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAVCAYAAACNDipWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIlSURBVGhD7VfbkcMgDHRT7odqaIZe+E8X6YATCnLWWMJHLr67MGRmZ8wa9FoQznK73RLifr9PDIQlwW8KPB4OAk+MhXmCBwTqOAUeEFPgwTEFHhzdAkfv0rosaclY1+RCVOd9LKJ/5sfIOSrzPgRdAke/kqg+hVi4GJKjAngZ/zayGBRPrJ9/gtrOu+ye4YpcCF0CezqxfyamhiuKf7CZN7FLAedcgYs2UpfAzQAoQLdK6y4F4aBd8o5OPrY7i1fsbBsqdwvheX6gDSfzKC4sUE8s+R0C7RBioCtps++S4/Vks+HjwJd3h7w2m4Xnd+1cpB7cTXkN5eHta/JNAkcuttzH7NyFRwJcyBIAFkvj2Q50iS3RYl8Skash7Auxm/vdWPIzgueVgmJRy3rP61s+KhEyb+WFNoXD92Y9oKuwDdhIFd4jMAaH41d4LC6jEhKBdr5jW+Nl3MNbtlr8WV649mxdfGww/sj1geYVfwq6BDbvYAwOx6/w2m6s52s82rBsa7yMe3jLVos/y0t7ttYJqJM9rpw3nWBuOeT4+BXdaFkSNM+HwDX+0Iot/sUWrfos4y6+4YOKrbdoJS+0qT5b9ZC6Zz95jnHwCF0CZ+z+B5OT7U4j58+PASVoHFs8P1Pwm51nsXb85lc+tGgH72x0xCLjXt70QbHVPL9T8trZtHLR64E6rLIBFHQLPNFAvQn+AabAg2MKPDiaAk+MhZ3A8zfaL6Uv9XuPUeMDVVAAAAAASUVORK5CYII=" InformativeScreenshot="1c8868304b021b4889ececafdd5b9dcc.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Connect to database'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="176, 171, 272, 15" ElementType="InputBox" FriendlyName="'tnt_mepdrpsup01'" FullSelectorArgument="&lt;wnd aaname='Connect to database:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Connect to database:' cls='Edit' /&gt;" Guid="de6cae7c-cc76-4df2-8377-f06691b26137" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARQAAAATCAYAAABRAvJ1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVHhe7ZrRdYMwDEU9lwfyPEzDMgzjSsI2CrGBtpymae9NOcWKJNMPPUtpQgYAuAkEBQBuA0EBgNtAUK6yLPoDAAe8l6AsU45xyj9d13OKOYSYYwg5prlYC/JMKaS8swL8S5qgnBbqi4r5gVc8w8OeS55izJMt9D6I0OiFoAAoCMoZc8rBdSVzCvmxSZnpUAAKTVDspNVitaJNebI2X0/fKAXkTuOjgi6xqcTGaS551hzVJ7Vcso+aa5yztwJ1/lG6A/+MdR/178Uuk/sbdCOLc89f1wf7a464tiTGfo2gAGw8dyhaXF4A5ITeis4VY48S20TC31usHxmc3XyLuJhZhMDagFXI6rMs2i00f8mj9mGsK/TiM9f91KbU9TDHeo+gAFyjLyijovP2Ht6nd6+/rWPwlwrDLrf3P7OPfORlXZUIWJJOyf5DcyWf4tYICsB1XiAoneLb5/b+Z/aRT1lKW1PGrpMOZZSDz1AALvOzgiIvG2G22WLLLUW5mQcjj9qrv8/djdVCr+NVHbXW4m++fpzr5rDFtlfLY4sCggJQaYKyfuh6cIpLyTSf8tYTPnZ4LwVoeXQcKUVs78to0uy7/ct4FKXTsDxPufuxyySCUWOLCphYmE1ikv98aLC/cPg9FAQFoNEE5aV4gfgs34mtXMnBN2UBTvmioOipXE7zh+uLJ/U7CAoAnPI7OhQA+BMgKABwGwgKANwGggIAN5HzB4xVQYt4+HCaAAAAAElFTkSuQmCC" InformativeScreenshot="c431ca53afb4a6ea682fb9db73ec0fa4.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Connect to database'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Text="[str_DatabaseName]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="176, 171, 272, 15" ElementType="InputBox" FriendlyName="'tnt_mepdrpsup01'" FullSelectorArgument="&lt;wnd aaname='Connect to database:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Connect to database:' cls='Edit' /&gt;" Guid="fc5b6590-5486-4788-8856-50f595351cb2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARQAAAATCAYAAABRAvJ1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVHhe7ZrRdYMwDEU9lwfyPEzDMgzjSsI2CrGBtpymae9NOcWKJNMPPUtpQgYAuAkEBQBuA0EBgNtAUK6yLPoDAAe8l6AsU45xyj9d13OKOYSYYwg5prlYC/JMKaS8swL8S5qgnBbqi4r5gVc8w8OeS55izJMt9D6I0OiFoAAoCMoZc8rBdSVzCvmxSZnpUAAKTVDspNVitaJNebI2X0/fKAXkTuOjgi6xqcTGaS551hzVJ7Vcso+aa5yztwJ1/lG6A/+MdR/178Uuk/sbdCOLc89f1wf7a464tiTGfo2gAGw8dyhaXF4A5ITeis4VY48S20TC31usHxmc3XyLuJhZhMDagFXI6rMs2i00f8mj9mGsK/TiM9f91KbU9TDHeo+gAFyjLyijovP2Ht6nd6+/rWPwlwrDLrf3P7OPfORlXZUIWJJOyf5DcyWf4tYICsB1XiAoneLb5/b+Z/aRT1lKW1PGrpMOZZSDz1AALvOzgiIvG2G22WLLLUW5mQcjj9qrv8/djdVCr+NVHbXW4m++fpzr5rDFtlfLY4sCggJQaYKyfuh6cIpLyTSf8tYTPnZ4LwVoeXQcKUVs78to0uy7/ct4FKXTsDxPufuxyySCUWOLCphYmE1ikv98aLC/cPg9FAQFoNEE5aV4gfgs34mtXMnBN2UBTvmioOipXE7zh+uLJ/U7CAoAnPI7OhQA+BMgKABwGwgKANwGggIAN5HzB4xVQYt4+HCaAAAAAElFTkSuQmCC" InformativeScreenshot="c431ca53afb4a6ea682fb9db73ec0fa4.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Connect'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de55c167-10ac-4620-bd8f-409161f9d2ef" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="146, 472, 75, 23" ElementType="Button" FriendlyName="'&amp;Connect'" FullSelectorArgument="&lt;wnd ctrlname='connect' aaname='Connect' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='connect' aaname='Connect' check:text='&amp;amp;Connect' /&gt;" Guid="ce595035-5eff-4def-ba19-08604cd55e36" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFVSURBVGhD7ZbRkYQgDEDpiW6o5P5ohVaoYr/twA6ygQWPcICLGXW8ycebkZhFfCawal1XEI4h8hiIPAZEnvp5CTsQX2TQSBYoxBcZpIRlWYQKkcdA5DEQeQwukeetAa0UqIDWYJxv5j2N0+V5q1GYBedTzDswSoPN46vxFjSux7fuTXKyPA8WK+02US0eI29voXjf6NzOBlyKaby2Bis2tnpo80G8Mc/2sUKV53jMd/gxcx5f4I3yQlWqbf+L7W3c5zfxRdO+6HC/DHP04nV1b89M89uUn7cLN1rTHPfJq+/l8ZF4rKySgaR6HgbnyhvteSMZs3GVWr6kzt+LH+BkeaPTdtC2PUmt+J/27MWf1rYJ8j+v3LfwRX83+vRCPUm9eLwuDobhgRGemw+NRrVOcom8/4rIYyDyGIg8Bl/LE/oQX2TQSBYoxFc5EOYQeQxE3mFWeAMbsNXvUKDyKQAAAABJRU5ErkJggg==" InformativeScreenshot="1937842d3e6213fba3a27fbbe93a24d0.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="SQL Server apllication is not appeared, please check application status" />
+                  <Throw Exception="[New Exception(&quot;SQL Server apllication is not appeared, please check application status&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, 31, 475, 67" ElementType="Text" FriendlyName="'SQL Server'" FullSelectorArgument="&lt;wnd ctrlname='sqlServerLabel' aaname='SQL Server' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='sqlServerLabel' aaname='SQL Server' check:text='SQL Server' /&gt;" Guid="81bdbcdf-5533-4b66-85bc-183c8b2cf8a3" ImageBase64="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" InformativeScreenshot="f2493b4f153448e6297b24dda72da955.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector, Image" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="C:\Program Files (x86)\Microsoft SQL Server Management Studio 20\Common7\IDE\ssms.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANsSURBVFhH1VdfSFNRHJ5B4UM95EsURJBEaNSLIb330mZRaUbBdHczzaLCInoL0QelDMx/D9HDfCrY7qb2UhaikeZ0964ETagH/6ZTajizbY7dnc45/u44bufOOYXqg4+7/e7vft+3s9+5d9P90wiPP88LjTR3Bt1PvgVc9d5Af80yJX5NaqHPrU7SA+3roLfqTxW06+1aNFgN96A1EaFPzd3L3VXKkr0QLdkuJifu+fX2biTkaXkDl1MUWM8UG6x6pEUSAlrXIzBYt8g1SoG/B+sXQCb9AP6Oy1zxVOh3XkIgo4kNAwSHjFzxVBjoPbL1AMpMBVr9YkYrPVeQ37HxDPgdZ9HK63wUdmWhyIhuewLEOF2BwuMWtOopRcHhEhQYMKJATy4K9GWj0IeDKDy0F5tmUGOVIKOJzQXgkDXjEWQ08dcDkN1BSO4TUFoPnilLnilLkEkfPFOWPFOWIJM+eKYseabK1/yf6jCCTPrgmbKMN49MXHCR66JTRjsJQUW2Ap4py3hzpEMZDkEWnlVIO0kIkEkfPFOWMfPJ825iLpqlJocgIdHsvopQ9Q6QiaHDJOfh8z0Owf3KVjy2C8ra4Jmy5JtLTcRcmTCMgQxFl8VzAJ/3OcySx1b2MQvKycEzZal+505BLifmhJ2CdFyZKX9KwlERAF6VW+S8U5DGuq659pGawyjtFy2ek7SBB2X2ZpRnTDn/cJR+ckE+h4VtagC8vI1kBSKTRf0gQ6EGAI6KpfIJfBzH4QuhJRHKwuOG6PcbCSGi8w985Dz+NJWqqChInXgAX8L7WirAwG7ynFZ7gVHM+S5L/x5o4QP9aMuJemv7lLn7y8ps5VqI2etIWah7YRV6M3GIbiIomtxFdBeY5BYwiIWwmT25+L0XcxqHHMBHH+57J5qGj0FLakCLbbuRr7FA8TZUkdVBE9WZJAQWvE3MaU9cCGeJnIOPxHxKNA8fpkLJQH9AwkMCSpvG2my4WyHECuZ0SuYE5NGoPiahlBbI8mLjIA2BVwTKG2M7ArDfOZ6RdhqCM5hcbDWAzeI+is3miHmHScqmMyFIzTSEWX4EbdrYSoB4cyivDWaqIdINwEw7d+DYwXSapRooJ4INwKPW7nCUeQ7hu+D7ZNOublGnSboDpUSkG2DbQP4okhBa1PwB+f9Dp/sDE5Yq8PHuOBUAAAAASUVORK5CYII=" InformativeScreenshot="094c21e472a99ed7af0fec9ab460514e.png" Selector="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='Microsoft SQL Server Management Studio'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
